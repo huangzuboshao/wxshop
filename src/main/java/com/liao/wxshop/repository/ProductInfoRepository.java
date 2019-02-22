@@ -2,6 +2,7 @@ package com.liao.wxshop.repository;
 
 import com.liao.wxshop.dataobject.ProductInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @author liao
  * @date 2019/2/20
  */
+@Repository
 public interface ProductInfoRepository extends JpaRepository<ProductInfo,String> {
 
     /**
