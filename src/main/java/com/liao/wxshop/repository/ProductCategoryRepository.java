@@ -16,5 +16,10 @@ import java.util.List;
 @Repository
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Integer>, JpaSpecificationExecutor<ProductCategory> {
 
+    /**
+     *
+     * @param categoryTypeList 分类id集合
+     * @return 商品分类列表
+     */
     List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 }
