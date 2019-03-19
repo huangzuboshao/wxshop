@@ -1,8 +1,8 @@
 package com.liao.wxshop.controller;
 
-import com.liao.wxshop.VO.ProductInfoVO;
-import com.liao.wxshop.VO.ProductVO;
-import com.liao.wxshop.VO.ResultBean;
+import com.liao.wxshop.vo.ProductInfoVO;
+import com.liao.wxshop.vo.ProductVO;
+import com.liao.wxshop.vo.ResultBean;
 import com.liao.wxshop.dataobject.ProductCategory;
 import com.liao.wxshop.dataobject.ProductInfo;
 import com.liao.wxshop.service.CategoryService;
@@ -10,7 +10,6 @@ import com.liao.wxshop.service.ProductService;
 import com.liao.wxshop.util.ResultVOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * TODO..
+ * 买家端接口
  *
  * @author liao
  * @date 2019/2/20

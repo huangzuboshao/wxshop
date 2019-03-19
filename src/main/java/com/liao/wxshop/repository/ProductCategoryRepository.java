@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2019/2/19
  */
 @Repository
-public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Integer>, JpaSpecificationExecutor<ProductCategory> {
+public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Integer>{
 
     /**
      *

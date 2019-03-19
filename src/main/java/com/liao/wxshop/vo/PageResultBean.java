@@ -1,4 +1,4 @@
-package com.liao.wxshop.VO;
+package com.liao.wxshop.vo;
 
 import java.util.List;
 

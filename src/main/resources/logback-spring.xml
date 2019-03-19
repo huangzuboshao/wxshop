@@ -5,14 +5,14 @@
     <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>
-                %d - %msg%n
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %msg%n
             </pattern>
         </layout>
     </appender>
 
     <!--日志每天输出一个文件-->
     <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">jd
             <level>ERROR</level>
             <OnMatch>DENY</OnMatch>
             <OnMismatch>ACCEPT</OnMismatch>

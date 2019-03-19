@@ -1,4 +1,4 @@
-package com.liao.wxshop.VO;
+package com.liao.wxshop.vo;
 
 import lombok.Data;
 
@@ -26,9 +26,9 @@ public class ResultBean<T> implements Serializable {
      */
     public static final int NO_PERMISSION = 2;
 
-    public String msg = "success";
-
     public int code = SUCCESS;
+
+    public String msg = "success";
 
     private T data;
 
@@ -43,7 +43,7 @@ public class ResultBean<T> implements Serializable {
 
     public ResultBean(Throwable e) {
         super();
-        this.msg = e.toString();
         this.code = FAIL;
+        this.msg = e.toString();
     }
 }
