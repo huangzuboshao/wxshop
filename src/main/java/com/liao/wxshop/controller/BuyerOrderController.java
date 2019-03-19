@@ -1,5 +1,6 @@
 package com.liao.wxshop.controller;
 
+import com.liao.wxshop.service.BuyerService;
 import com.liao.wxshop.vo.ResultBean;
 import com.liao.wxshop.converter.OrderForm2OrderDTOConverter;
 import com.liao.wxshop.dto.OrderDTO;
@@ -35,6 +36,9 @@ public class BuyerOrderController {
 
     @Autowired
     private OrderService orderService;
+
+    @Autowired
+    private BuyerService buyerService;
 
     /**
      * 创建订单
@@ -73,7 +77,22 @@ public class BuyerOrderController {
         return ResultVOUtils.success(orderDTOPage.getContent());
     }
 
-    //订单详情
+    /**
+     * 订单详情
+     */
+    @GetMapping("/detail")
+    public ResultBean<OrderDTO> detail(@RequestParam("openid") String buyerOpenid, @RequestParam("orderId") String orderId) {
+        OrderDTO orderDTO = buyerService.findOrderOne(buyerOpenid, orderId);
+        return ResultVOUtils.success(orderDTO);
+    }
 
-    //取消订单
+    /**
+     * 取消订单
+     */
+    @PostMapping("/cancel")
+    public ResultBean cancel(@RequestParam("openid") String buyerOpenid, @RequestParam("orderId") String orderId) {
+        OrderDTO orderDTO = buyerService.findOrderOne(buyerOpenid, orderId);
+        orderService.cancel(orderDTO);
+        return ResultVOUtils.success();
+    }
 }
