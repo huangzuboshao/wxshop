@@ -29,6 +29,9 @@ public enum ResultEnum {
     PARAM_ERROR(30005, "参数不正确"),
     CART_IS_EMPTY(30006, "购物车为空"),
     ORDER_OWNER_ERROR(30007, "该订单不属于当前用户"),
+
+
+    WECHAT_MP_AUTHORIZE_ERROR(40001, "微信公众账号方面错误"),
     ;
 
     private Integer code;

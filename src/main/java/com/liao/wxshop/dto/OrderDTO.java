@@ -31,6 +31,11 @@ public class OrderDTO {
      * 买家电话.
      */
     private String buyerPhone;
+
+    /**
+     * 城市编号.
+     */
+    private String cityCode;
     /**
      * 买家地址.
      */

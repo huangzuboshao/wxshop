@@ -26,6 +26,12 @@ public class OrderForm {
     private String phone;
 
     /**
+     * 城市编号
+     */
+    /*@NotBlank(message = "城市编号")*/
+    private String cityCode;
+
+    /**
      * 买家地址
      */
     @NotBlank(message = "地址必填")

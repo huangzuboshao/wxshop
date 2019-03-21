@@ -9,7 +9,17 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: non_null #全局jackson配置
-
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 server:
+  tomcat:
+    uri-encoding: UTF-8
   context-path: /wxshop
+wechat:
+  #公众号
+  mpAppId: wxce0f7960881a2cac
+  mpAppSecret: fa27386e007ec04e023a619e41cea46e
 

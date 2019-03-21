@@ -27,6 +27,7 @@ public class OrderForm2OrderDTOConverter extends Converter<OrderForm, OrderDTO> 
         orderDTO.setBuyerName(orderForm.getName());
         orderDTO.setBuyerOpenid(orderForm.getOpenid());
         orderDTO.setBuyerPhone(orderForm.getPhone());
+        orderDTO.setCityCode(orderForm.getCityCode());
         orderDTO.setBuyerAddress(orderForm.getAddress());
         Gson gson = new Gson();
         List<OrderDetail> orderDetailList;

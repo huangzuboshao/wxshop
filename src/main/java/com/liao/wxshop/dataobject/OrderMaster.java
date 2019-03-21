@@ -39,6 +39,10 @@ public class OrderMaster {
      */
     private String buyerPhone;
     /**
+     * 城市编号.
+     */
+    private String cityCode;
+    /**
      * 买家地址.
      */
     private String buyerAddress;

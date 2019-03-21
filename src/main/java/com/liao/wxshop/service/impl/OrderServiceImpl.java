@@ -54,7 +54,7 @@ public class OrderServiceImpl implements OrderService {
     @Transactional(rollbackFor = Exception.class)
     @Override
     public OrderDTO create(OrderDTO orderDTO) {
-        String orderId = KeyUtils.genUniqueKeyByPosition(null);
+        String orderId = KeyUtils.genUniqueKeyByPosition(orderDTO.getCityCode());
         //订单总价
         BigDecimal orderAmount = new BigDecimal(BigInteger.ZERO);
         List<OrderDetail> orderDetailList = orderDTO.getOrderDetailList();
@@ -88,6 +88,7 @@ public class OrderServiceImpl implements OrderService {
         orderMaster.setOrderAmount(orderAmount);
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
+        orderMaster.setCityCode("000000");
 
         orderMasterRepository.save(orderMaster);
 
